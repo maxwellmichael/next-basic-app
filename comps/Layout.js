@@ -1,11 +1,12 @@
 import Navbar from "./Navbar";
-
+import {motion} from 'framer-motion'
 const Layout = (props) => {
     return ( 
-        <div className="content">
+        <motion.div className="page_container">
         <Navbar/>
+            
         {props.children}
-        </div>
+        </motion.div>
     );
 }
  
