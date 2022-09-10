@@ -3,7 +3,7 @@ export default function Contact() {
   return (
     <>
       <Head>
-        <title>My Next App | Contact</title>
+        <title>Eye Candy | Contact</title>
       </Head>
       <div>
         <h1>Contact Page</h1>

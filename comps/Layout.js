@@ -4,7 +4,6 @@ const Layout = (props) => {
     return ( 
         <motion.div className="page_container">
         <Navbar/>
-            
         {props.children}
         </motion.div>
     );

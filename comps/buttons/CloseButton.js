@@ -3,16 +3,26 @@ import Image from 'next/image'
 import { motion } from 'framer-motion'
 
 const CloseButton = ({ close }) => {
+  const variants = {
+    hidden: {
+      opacity: 0,
+      x: -200,
+      rotate: 360,
+    },
+    enter: { opacity: 1, x: 0, rotate: 0 },
+    exit: {
+      opacity: 0,
+      x: -200,
+      rotate: 360,
+    },
+  }
   return (
     <motion.div
-      animate={{
-        rotate: 360,
-      }}
-      transition={{
-        duration: 5,
-        ease: 'linear',
-        repeat: Infinity,
-      }}
+      variants={variants} // Pass the variant object into Framer Motion
+      initial="hidden" // Set the initial state to variants.hidden
+      animate="enter" // Animated state to variants.enter
+      exit="exit" // Exit state (used later) to variants.exit
+      transition={{ delay:0.6, type:'spring', duration:1.6 }}
       onClick={() => close()}
       className={styles.main}
     >
